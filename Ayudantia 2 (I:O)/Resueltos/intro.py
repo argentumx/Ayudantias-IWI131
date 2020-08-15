@@ -1,0 +1,6 @@
+nombre = input("Ingrese su nombre: ")
+edad = input("Ingrese su edad: ")
+carrera = input("Ingrese su carrera: ")
+print("Me llamo", nombre)
+print("Tengo", edad)
+print("Soy de", carrera)
