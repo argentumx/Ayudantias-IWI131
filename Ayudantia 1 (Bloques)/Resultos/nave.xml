@@ -1,0 +1,718 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="OKaI3?;Nv~C/M9Iy0wN;">cantidad de estrellas</variable>
+    <variable type="" id="2ol#Yo4gf;l7:]7=m}-M">tamaño de lado</variable>
+    <variable type="" id="@ci)i~IZ@lo%*#K=vC0+">color</variable>
+    <variable type="" id="(ALQOhW((u`MV8oUTEp9">lado</variable>
+    <variable type="" id="tFg(n@uZ$RxRl4mBD%qy">color_cielo</variable>
+    <variable type="" id="Uu#Riruk%9_P8CGM3MB;">color_nave</variable>
+    <variable type="" id=")/L]@8*.$Ii$gjKHN{1R">x</variable>
+    <variable type="" id="zJ~k_1p)+Y^39ygzCg)%">pos</variable>
+    <variable type="" id="CIDr]#GxwY#pl8u.V3h7">tamaño</variable>
+  </variables>
+  <block type="procedures_defnoreturn" id="E+46AK9+ysg*UbE.vF*S" x="-239" y="923">
+    <mutation>
+      <arg name="cantidad de estrellas" varid="OKaI3?;Nv~C/M9Iy0wN;"></arg>
+    </mutation>
+    <field name="NAME">hacer estrella</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="controls_repeat_ext" id="www1#l=bF_%(L0S`S{;@">
+        <value name="TIMES">
+          <block type="variables_get" id="{#)d/Fr7zDD(,~M^kj;x">
+            <field name="VAR" id="OKaI3?;Nv~C/M9Iy0wN;" variabletype="">cantidad de estrellas</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="draw_pen" id="_3K~X0D/m$L%vyWd(^#=">
+            <field name="PEN">penup</field>
+            <next>
+              <block type="goto" id="9W;A6CD|a_v~HyqII3Pb">
+                <value name="X">
+                  <block type="math_random_int" id="PiqN)-$ZjiiIPf}|6~^X">
+                    <value name="FROM">
+                      <block type="math_number" id="JDPX+UC?9^a11xF-CR{e">
+                        <field name="NUM">-200</field>
+                      </block>
+                    </value>
+                    <value name="TO">
+                      <block type="math_number" id="D$ZHv!Rl0B`9|W/iowZ[">
+                        <field name="NUM">200</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="Y">
+                  <block type="math_random_int" id="l-CJRIme=7e!+?%U$A?h">
+                    <value name="FROM">
+                      <block type="math_number" id="c^p02ZYQ/RA14BD`B]PI">
+                        <field name="NUM">-200</field>
+                      </block>
+                    </value>
+                    <value name="TO">
+                      <block type="math_number" id="{4VdA^t*B-bDuyA{oX[V">
+                        <field name="NUM">200</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="draw_pen" id="_o6VeR^DEH~eZjw*l!DZ">
+                    <field name="PEN">pendown</field>
+                    <next>
+                      <block type="draw_color" id="j~hrTwa{/4[y`Hi@zAG#">
+                        <value name="COLOR">
+                          <block type="colour_picker" id="Ak;GdTbE#~]L!A{$fGBV">
+                            <field name="COLOUR">#ffff66</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="begin_fill" id="vrv.6IgVX[;8~`NS#=JZ">
+                            <next>
+                              <block type="variables_set" id="ssq|!%2a60}1;$lHfLk5">
+                                <field name="VAR" id="CIDr]#GxwY#pl8u.V3h7" variabletype="">tamaño</field>
+                                <value name="VALUE">
+                                  <block type="math_random_int" id="(/75GZp{dQ8K?Y,FwZy|">
+                                    <value name="FROM">
+                                      <block type="math_number" id="0So=6MfY][KsiVtVtnL%">
+                                        <field name="NUM">10</field>
+                                      </block>
+                                    </value>
+                                    <value name="TO">
+                                      <block type="math_number" id="QpA2bDn{4;OYkBFk-N6w">
+                                        <field name="NUM">40</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="controls_repeat" id="|.FYpWz:.C^3i#[pPko`">
+                                    <field name="TIMES">5</field>
+                                    <statement name="DO">
+                                      <block type="draw_move" id="^!z,~P5h4MQ1oi14f0Wr">
+                                        <field name="DIR">forward</field>
+                                        <value name="VALUE">
+                                          <block type="variables_get" id="5*4AeBJi`T8vs/)qgXu`">
+                                            <field name="VAR" id="CIDr]#GxwY#pl8u.V3h7" variabletype="">tamaño</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="draw_turn" id="B9OloSkCZA%~4YbS@ydh">
+                                            <field name="DIR">right</field>
+                                            <value name="VALUE">
+                                              <block type="math_number" id="47:~UyN#9|E}sg.Kx%IE">
+                                                <field name="NUM">144</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="end_fill" id="=f@=0c[|FA6nZOh1VB$s"></block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="draw_color" id="d3pEZs@:vm)rP/n(tqq^">
+            <value name="COLOR">
+              <block type="colour_picker" id="H*qIN%DzO(oC^qLYP{|6">
+                <field name="COLOUR">#000000</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="aA}Jk`G4Ha13KZSAKIz+" x="135" y="1394">
+    <mutation>
+      <arg name="tamaño de lado" varid="2ol#Yo4gf;l7:]7=m}-M"></arg>
+      <arg name="color" varid="@ci)i~IZ@lo%*#K=vC0+"></arg>
+    </mutation>
+    <field name="NAME">hacer cuadrado</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="draw_color" id="*:@itN7Ve_ERldn*CPF0">
+        <value name="COLOR">
+          <block type="variables_get" id="L[(9Gl7Kk#3)*GAP4jwq">
+            <field name="VAR" id="@ci)i~IZ@lo%*#K=vC0+" variabletype="">color</field>
+          </block>
+        </value>
+        <next>
+          <block type="begin_fill" id="R~~hIz:nU$Y7Z!N*#{^@">
+            <next>
+              <block type="controls_repeat" id="Q%7O^IKvex{Hcw6?{,s?">
+                <field name="TIMES">4</field>
+                <statement name="DO">
+                  <block type="draw_move" id="Gm#fOQYi?t044G1ySnq9">
+                    <field name="DIR">forward</field>
+                    <value name="VALUE">
+                      <block type="variables_get" id="a-}|BW2E:g}QoT?P]^ih">
+                        <field name="VAR" id="2ol#Yo4gf;l7:]7=m}-M" variabletype="">tamaño de lado</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="draw_turn" id="puh/8Tyg(,`?2=xn9`Ff">
+                        <field name="DIR">right</field>
+                        <value name="VALUE">
+                          <block type="math_number" id="+q=61Yd:6)|hf]W#*a/h">
+                            <field name="NUM">90</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="end_fill" id=";$aYi5j13u]Rx1+b{t?y">
+                    <next>
+                      <block type="draw_pen" id="n2|I0aketO.h@IFmykh.">
+                        <field name="PEN">penup</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="Rg=FN6HJr?)*$e8fh#)A" x="-211" y="1619">
+    <mutation>
+      <arg name="lado" varid="(ALQOhW((u`MV8oUTEp9"></arg>
+      <arg name="color" varid="@ci)i~IZ@lo%*#K=vC0+"></arg>
+    </mutation>
+    <field name="NAME">triangulo regular</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="draw_color" id="H5o0U7~PB}T)wnb..]Ad">
+        <value name="COLOR">
+          <block type="variables_get" id=",($|~1uHgt/TYFmkN9h*">
+            <field name="VAR" id="@ci)i~IZ@lo%*#K=vC0+" variabletype="">color</field>
+          </block>
+        </value>
+        <next>
+          <block type="begin_fill" id="b9kY*fh`V[YC/i0,y)GJ">
+            <next>
+              <block type="controls_repeat" id="ljE}:pqBBF+D8+u:M59f">
+                <field name="TIMES">3</field>
+                <statement name="DO">
+                  <block type="draw_move" id="0wQ.Vzm#jsJxJ4yqVUEO">
+                    <field name="DIR">forward</field>
+                    <value name="VALUE">
+                      <block type="variables_get" id="+!ADrUdfEL}-1=*kbs*@">
+                        <field name="VAR" id="(ALQOhW((u`MV8oUTEp9" variabletype="">lado</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="draw_turn" id="u5@sskZ.8NG/*:}v3FFt">
+                        <field name="DIR">left</field>
+                        <value name="VALUE">
+                          <block type="math_number" id="|$=G+H:G)Fo3dPC!~y=f">
+                            <field name="NUM">120</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="end_fill" id="Xvg@)SR]zkLndD8P(i??">
+                    <next>
+                      <block type="draw_pen" id="h{*wR%DYO=*)KaHIOVL7">
+                        <field name="PEN">penup</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="*!O[@nICMg?VgjP_sZsy" x="142" y="1655">
+    <mutation>
+      <arg name="color_cielo" varid="tFg(n@uZ$RxRl4mBD%qy"></arg>
+    </mutation>
+    <field name="NAME">dibujar_cielo</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="draw_pen" id="Pl;})C*7?nc=#%rYgK@|">
+        <field name="PEN">penup</field>
+        <next>
+          <block type="goto" id="NxLttam7M:-O$}oMw2wq">
+            <value name="X">
+              <block type="math_number" id="loT%YvA0hB=vXYrra[:?">
+                <field name="NUM">-200</field>
+              </block>
+            </value>
+            <value name="Y">
+              <block type="math_number" id="lU?he-!!]JvEl9t=?~;C">
+                <field name="NUM">200</field>
+              </block>
+            </value>
+            <next>
+              <block type="draw_pen" id="*C}I0(,c84VsPWN1^`n4">
+                <field name="PEN">pendown</field>
+                <next>
+                  <block type="draw_pen" id="yST)GVqgW_CGqct.o2uB">
+                    <field name="PEN">penup</field>
+                    <next>
+                      <block type="procedures_callnoreturn" id="Fob^k|^NKaIiAI-_CISN">
+                        <mutation name="hacer cuadrado">
+                          <arg name="tamaño de lado"></arg>
+                          <arg name="color"></arg>
+                        </mutation>
+                        <value name="ARG0">
+                          <block type="math_number" id="8EAE-@O:!MdEk[={_G0t">
+                            <field name="NUM">400</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="colour_picker" id="fp?N*u=9x#7Ad(FGodA=">
+                            <field name="COLOUR">#330099</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="draw_pen" id="CZ7SaACeau5yYtz!1W4r">
+                            <field name="PEN">penup</field>
+                            <next>
+                              <block type="procedures_callnoreturn" id="{u!Jq#{0_@*M^)Y6r~7[">
+                                <mutation name="hacer estrella">
+                                  <arg name="cantidad de estrellas"></arg>
+                                </mutation>
+                                <value name="ARG0">
+                                  <block type="math_number" id="+I5*zx!(.{)jZUr{z96K">
+                                    <field name="NUM">20</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="draw_pen" id="|.Q=Bkr{-C7a3Hep1e2W">
+                                    <field name="PEN">penup</field>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="(3^V3@xev4lQ[i3Ad.?[" x="-219" y="1873">
+    <mutation>
+      <arg name="color_nave" varid="Uu#Riruk%9_P8CGM3MB;"></arg>
+    </mutation>
+    <field name="NAME">dibujar_nave</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="procedures_callnoreturn" id="~0^wnUg@hS)a[3X0V0|J">
+        <mutation name="cuerpo_nave">
+          <arg name="color_nave"></arg>
+        </mutation>
+        <value name="ARG0">
+          <block type="variables_get" id="/[q;CLWz[P=Edeh+pZhN">
+            <field name="VAR" id="Uu#Riruk%9_P8CGM3MB;" variabletype="">color_nave</field>
+          </block>
+        </value>
+        <next>
+          <block type="draw_pen" id="xvAh^+8|;0t}wb}2+nTO">
+            <field name="PEN">penup</field>
+            <next>
+              <block type="goto" id="7d9g?$}mie{UgQ.SvDH6">
+                <value name="X">
+                  <block type="math_number" id="PiQ;XfZbz@//OXp+}`)#">
+                    <field name="NUM">-80</field>
+                  </block>
+                </value>
+                <value name="Y">
+                  <block type="math_number" id="pm#M+$JZCb0NTVIG!JcS">
+                    <field name="NUM">-100</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="procedures_callnoreturn" id="Y`V}Ect8lt(dyCp}C/}e">
+                    <mutation name="dibujar_turbina">
+                      <arg name="x"></arg>
+                    </mutation>
+                    <value name="ARG0">
+                      <block type="math_number" id="re=lMo8Xd8Uajywf,#_v">
+                        <field name="NUM">-80</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="goto" id="H!y$@p2,V2hL,QT5FM=C">
+                        <value name="X">
+                          <block type="math_number" id="%Qq$6LieE*oY=o1ofYb;">
+                            <field name="NUM">10</field>
+                          </block>
+                        </value>
+                        <value name="Y">
+                          <block type="math_number" id="|X+ma3,z*bM(Eb*#-$v|">
+                            <field name="NUM">-100</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="procedures_callnoreturn" id="{(sFraWDu7Tcb0_giG4.">
+                            <mutation name="dibujar_turbina">
+                              <arg name="x"></arg>
+                            </mutation>
+                            <value name="ARG0">
+                              <block type="math_number" id="i8i=^}+2CKm@||(.A4Oz">
+                                <field name="NUM">10</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="goto" id="9F:G@AcVJcs~`ZS5t~x7">
+                                <value name="X">
+                                  <block type="math_number" id="V1!vp.w}L;(W9ah.P6xx">
+                                    <field name="NUM">-20</field>
+                                  </block>
+                                </value>
+                                <value name="Y">
+                                  <block type="math_number" id="5H.D$Kfn65-L=(Jq(k/`">
+                                    <field name="NUM">50</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="procedures_callnoreturn" id="ovF%yfH):6KAcAGfW0,Z">
+                                    <mutation name="hacer cuadrado">
+                                      <arg name="tamaño de lado"></arg>
+                                      <arg name="color"></arg>
+                                    </mutation>
+                                    <value name="ARG0">
+                                      <block type="math_number" id="*DGc]}~1IGD`?4[!6z^L">
+                                        <field name="NUM">40</field>
+                                      </block>
+                                    </value>
+                                    <value name="ARG1">
+                                      <block type="colour_picker" id="H*=H!Dsefcx8HVrG5*g`">
+                                        <field name="COLOUR">#ffff66</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="draw_pen" id="X8P7Vn#A]a.v9Z|gtmI7">
+                                        <field name="PEN">penup</field>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="we0h.8.nrB!s{LU6U`D!" x="141" y="2033">
+    <mutation>
+      <arg name="color_nave" varid="Uu#Riruk%9_P8CGM3MB;"></arg>
+    </mutation>
+    <field name="NAME">cuerpo_nave</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="draw_pen" id="l4E^/F2A`IXN|37%_3uN">
+        <field name="PEN">penup</field>
+        <next>
+          <block type="goto" id="fSVsEkRB^-YzI28YWI^L">
+            <value name="X">
+              <block type="math_number" id="YNSNDv3^D}%/L1K}q~LF">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <value name="Y">
+              <block type="math_number" id="iKpNkzmP%hzR,7Yy-u#F">
+                <field name="NUM">175</field>
+              </block>
+            </value>
+            <next>
+              <block type="draw_color" id="W@Opvm84,I2YHiQ.1K[?">
+                <value name="COLOR">
+                  <block type="variables_get" id="?Ts@l^rPdm]/G~I+9_+L">
+                    <field name="VAR" id="Uu#Riruk%9_P8CGM3MB;" variabletype="">color_nave</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="draw_pen" id="nW+fJqFl[kP:sjYRyZ]q">
+                    <field name="PEN">pendown</field>
+                    <next>
+                      <block type="begin_fill" id="vgc~jv8q1p{_NUf=Pwr,">
+                        <next>
+                          <block type="goto" id="pMORCmmjf=?!s?e}=)RD">
+                            <value name="X">
+                              <block type="math_number" id="lu[nIuO@AxjgYiqeN%`:">
+                                <field name="NUM">-50</field>
+                              </block>
+                            </value>
+                            <value name="Y">
+                              <block type="math_number" id="hn?hFk$ZiNeTn#$IS!Pl">
+                                <field name="NUM">100</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="goto" id="4NH?iu?!#X2h$xZlQ2%w">
+                                <value name="X">
+                                  <block type="math_number" id="d/w0ps]{_YkE)wOSyI3Q">
+                                    <field name="NUM">-50</field>
+                                  </block>
+                                </value>
+                                <value name="Y">
+                                  <block type="math_number" id=":(TEJiDmDc|I90cLC+ye">
+                                    <field name="NUM">-100</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="goto" id="S)S@?MFn)}c]PJ]e~bCI">
+                                    <value name="X">
+                                      <block type="math_number" id="7$W@e,JJt`{lGX|k%r|Y">
+                                        <field name="NUM">50</field>
+                                      </block>
+                                    </value>
+                                    <value name="Y">
+                                      <block type="math_number" id="2]$2;X?E[]{Gzq4fiJ6G">
+                                        <field name="NUM">-100</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="goto" id="*hs+-A%Uove=#];}kX$m">
+                                        <value name="X">
+                                          <block type="math_number" id="IbqF2$l%Unu9[OCU=e=U">
+                                            <field name="NUM">50</field>
+                                          </block>
+                                        </value>
+                                        <value name="Y">
+                                          <block type="math_number" id="w_{/se7z52j-wUdku}Gm">
+                                            <field name="NUM">100</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="goto" id="=GgwGL;#5UY@:=_Ys-12">
+                                            <value name="X">
+                                              <block type="math_number" id="^zC%aHiB+H]?r|iTT`40">
+                                                <field name="NUM">0</field>
+                                              </block>
+                                            </value>
+                                            <value name="Y">
+                                              <block type="math_number" id="l?=Us~xhj_/ZXvf7=A7:">
+                                                <field name="NUM">175</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="end_fill" id="fE:PpIVf]dYyx@g.IBdS"></block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="5b7s*9E{KIm27xpq_g@K" x="147" y="2513">
+    <mutation>
+      <arg name="x" varid=")/L]@8*.$Ii$gjKHN{1R"></arg>
+    </mutation>
+    <field name="NAME">dibujar_turbina</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="draw_pen" id="O82~1.mP_e%hE1QBxmod">
+        <field name="PEN">pendown</field>
+        <next>
+          <block type="procedures_callnoreturn" id="!=EysMOcRSyMj8jQ=WQa">
+            <mutation name="triangulo regular">
+              <arg name="lado"></arg>
+              <arg name="color"></arg>
+            </mutation>
+            <value name="ARG0">
+              <block type="math_number" id="%TN}$UVp)3zBCuy!A}3m">
+                <field name="NUM">80</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="colour_picker" id="93(dHfpYX3FENqvF.1#e">
+                <field name="COLOUR">#999999</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id=",*F2nH$z3q!T@j,XKY,-">
+                <field name="VAR" id="zJ~k_1p)+Y^39ygzCg)%" variabletype="">pos</field>
+                <value name="VALUE">
+                  <block type="variables_get" id=",4D%p_Rm83+]]h_`Wi3b">
+                    <field name="VAR" id=")/L]@8*.$Ii$gjKHN{1R" variabletype="">x</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_repeat" id="dVkh2ML),qxT`yKSfRx3">
+                    <field name="TIMES">3</field>
+                    <statement name="DO">
+                      <block type="draw_pen" id="$}4ZUMDAt4d;M,H}yvNF">
+                        <field name="PEN">penup</field>
+                        <next>
+                          <block type="goto" id="u4PW]`y~atCM95V03iqm">
+                            <value name="X">
+                              <block type="variables_get" id="Gp]h(22=,h2n},V6b]e#">
+                                <field name="VAR" id="zJ~k_1p)+Y^39ygzCg)%" variabletype="">pos</field>
+                              </block>
+                            </value>
+                            <value name="Y">
+                              <block type="math_number" id="`sn^ItL(B4Vok5`b(yox">
+                                <field name="NUM">-110</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="draw_pen" id="[C[coeyzPa!_j6[x^q9R">
+                                <field name="PEN">pendown</field>
+                                <next>
+                                  <block type="procedures_callnoreturn" id="[-@L(c|O`f^oRJQMb3cs">
+                                    <mutation name="triangulo regular">
+                                      <arg name="lado"></arg>
+                                      <arg name="color"></arg>
+                                    </mutation>
+                                    <value name="ARG0">
+                                      <block type="math_number" id="z3|(l=sG}^t8=2+|A+hF">
+                                        <field name="NUM">30</field>
+                                      </block>
+                                    </value>
+                                    <value name="ARG1">
+                                      <block type="colour_picker" id="5Es3Gjw!P+Newm_oBMVe">
+                                        <field name="COLOUR">#ff9900</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="variables_set" id="8koCd%8{evH,;[e;RZ/f">
+                                        <field name="VAR" id="zJ~k_1p)+Y^39ygzCg)%" variabletype="">pos</field>
+                                        <value name="VALUE">
+                                          <block type="math_arithmetic" id="=-C$6qzU$~A=lQ5JuqjG">
+                                            <field name="OP">ADD</field>
+                                            <value name="A">
+                                              <block type="variables_get" id="Ax[;Etp2AIh=z_7{W3IO">
+                                                <field name="VAR" id="zJ~k_1p)+Y^39ygzCg)%" variabletype="">pos</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="math_number" id="o@h%X/jo!fZ}q2i#4jFc">
+                                                <field name="NUM">25</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="draw_pen" id="osE)WkOLmBZxIEj=B56S">
+                        <field name="PEN">penup</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="draw_shape" id="U%.,R}P7xm{-~G-Q|73q" x="-194" y="2693">
+    <field name="SHAPE">turtle</field>
+    <next>
+      <block type="draw_speed" id="@/KP(:sM+Y0x}^#q]$l:">
+        <value name="VALUE">
+          <block type="math_number" id="1whIfwdt2sB@h2e8]|oN">
+            <field name="NUM">100</field>
+          </block>
+        </value>
+        <next>
+          <block type="procedures_callnoreturn" id="E??`?nyNQ]nJ,~6GAgSX">
+            <mutation name="dibujar_cielo">
+              <arg name="color_cielo"></arg>
+            </mutation>
+            <value name="ARG0">
+              <block type="colour_picker" id="mvkrnhElP9upoxj-Q7O+">
+                <field name="COLOUR">#000066</field>
+              </block>
+            </value>
+            <next>
+              <block type="procedures_callnoreturn" id=",Q,hxgVdgj5@Y2H8%{Ik">
+                <mutation name="dibujar_nave">
+                  <arg name="color_nave"></arg>
+                </mutation>
+                <value name="ARG0">
+                  <block type="colour_picker" id="(*q$8dG.Q:`S+P[fu8u0">
+                    <field name="COLOUR">#ff0000</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="goto" id="^]pyPVzA*9JaIp?DuQGl">
+                    <value name="X">
+                      <block type="math_number" id=":sB?N5fa4-qnpr|U?BwH">
+                        <field name="NUM">-400</field>
+                      </block>
+                    </value>
+                    <value name="Y">
+                      <block type="math_number" id="U]3w$UtQ5KBf8Wgij?hY">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
